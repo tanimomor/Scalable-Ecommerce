@@ -1,9 +1,9 @@
-# discounts/serializers.py
+# inventory/serializers.py
 
 from rest_framework import serializers
-from .models import Discount
+from .models import Inventory
 
-class DiscountSerializer(serializers.ModelSerializer):
+class InventorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Discount
+        model = Inventory
         fields = '__all__'
