@@ -1,3 +1,9 @@
-from django.shortcuts import render
+# shipping/views.py
 
-# Create your views here.
+from rest_framework import viewsets
+from .models import ShippingAddress
+from .serializers import ShippingAddressSerializer
+
+class ShippingAddressViewSet(viewsets.ModelViewSet):
+    queryset = ShippingAddress.objects.all()
+    serializer_class = ShippingAddressSerializer
